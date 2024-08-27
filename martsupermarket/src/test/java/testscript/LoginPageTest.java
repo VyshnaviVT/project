@@ -4,6 +4,8 @@ import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
 
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import constants.Constants;
@@ -11,10 +13,20 @@ import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class LoginPageTest extends BaseMart {
-	@Test(priority = 1)
-	public void verifyValidUsernameandPassword() throws IOException {
-		String userNameField = ExcelUtility.getStringData(1, 0, "Login_data");// row,column
-		String passWord = ExcelUtility.getStringData(1, 1, "Login_data");
+	@DataProvider(name="credentials")
+	
+	public Object[][] testData() {        // data provider
+		Object[][] input = new Object[2][2];
+		input[0][0] = "admin";
+		input[0][1] = "admin";
+		input[1][0] = "admin@123";
+		input[1][1] = "admin123";
+		return input;
+		}
+	@Test(priority = 1,dataProvider = "credentials")
+	public void verifyValidUsernameandPassword(String userNameField,String passWord) throws IOException {
+	//	String userNameField = ExcelUtility.getStringData(1, 0, "Login_data");// row,column
+	//	String passWord = ExcelUtility.getStringData(1, 1, "Login_data");
 		LoginPage login = new LoginPage(driver);
 		login.entervalidUsername(userNameField);
 		login.entervalidPassword(passWord);
@@ -26,9 +38,10 @@ public class LoginPageTest extends BaseMart {
 	}
 
 	@Test(priority = 2)
-	public void verifyInValidUsernameandValidPassword() throws IOException {
-		String userNameField = ExcelUtility.getStringData(2, 0, "Login_data");
-		String passWord = ExcelUtility.getStringData(1, 1, "Login_data");
+	@Parameters({"Username","Password"})
+	public void verifyInValidUsernameandValidPassword(String userNameField,String passWord) throws IOException {
+	//	String userNameField = ExcelUtility.getStringData(2, 0, "Login_data");
+	//	String passWord = ExcelUtility.getStringData(1, 1, "Login_data");
 		LoginPage login = new LoginPage(driver);
 		login.entervalidUsername(userNameField);
 		login.entervalidPassword(passWord);
