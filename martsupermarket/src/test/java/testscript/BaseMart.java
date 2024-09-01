@@ -1,16 +1,24 @@
 package testscript;
 
 import org.testng.annotations.Test;
+
+import utilities.ScreenshotUtility;
+
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
+
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 
 public class BaseMart {
 	WebDriver driver;
+	ScreenshotUtility scrshot;
 
 	@BeforeMethod
 	@Parameters("Browser")   //crossbroser testing
@@ -30,8 +38,13 @@ public class BaseMart {
 	}
 
 	@AfterMethod
-	public void afterMethod() {
-		// driver.quit();
-	}
+	 public void browserQuit(ITestResult itestresult) throws IOException 
+ 	 {
+		if (itestresult.getStatus() == ITestResult.FAILURE) {
+			scrshot = new ScreenshotUtility();
+			scrshot.captureFailureScreenShot(driver, itestresult.getName());
+			driver.quit();
 
+		}
+ 	}
 }
