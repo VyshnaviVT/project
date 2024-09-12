@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.FileUploadUtility;
+import utilities.waitUtility;
 
 public class ManageNewsEdit {
 	WebDriver driver;
@@ -18,6 +19,7 @@ public class ManageNewsEdit {
 	}
 
 	FileUploadUtility fileUpload=new FileUploadUtility();
+	waitUtility Wait = new waitUtility();
 	
 	@FindBy(xpath = "(//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news'])[1]")
 	WebElement manageNews;
@@ -45,6 +47,7 @@ public class ManageNewsEdit {
 	}
 	
 	public void clickUpdateButton() {
+		Wait.waitManageNewEdit(updateButton);
 		updateButton.click();
 	}
 	

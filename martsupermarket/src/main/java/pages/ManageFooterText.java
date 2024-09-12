@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.FileUploadUtility;
+import utilities.waitUtility;
 
 public class ManageFooterText {
 	WebDriver driver;
@@ -18,6 +19,7 @@ public class ManageFooterText {
 	}
 	
 	FileUploadUtility fileUpload=new FileUploadUtility();
+	waitUtility Wait = new waitUtility();
 
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-footertext'][1]")
 	WebElement manageFooterText;
@@ -60,6 +62,7 @@ public class ManageFooterText {
 	}
 
 	public void clickUpdateButton() {
+		Wait.waitManageFooter(updateButton);
 		updateButton.click();
 	}
 	

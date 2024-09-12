@@ -8,23 +8,20 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">CrossBrowserTesting</th></tr>
-<tr><td><a href="#t0">Chrome Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">8,757</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Edge Test</a></td><td class="num">0</td><td class="num attn">2</td><td class="num">0</td><td class="num">0</td><td class="num">4,868</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">1</th><th class="num attn">2</th><th class="num">0</th><th class="num attn">1</th><th class="num">13,625</th><th colspan="2"></th></tr>
+<tr><th colspan="8">Grouping</th></tr>
+<tr><td><a href="#t0">Grouping</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">2</td><td class="num attn">1</td><td class="num">18,476</td><td>Smoke</td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">CrossBrowserTesting</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Chrome Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testscript.LoginPageTest</td><td><a href="#m0">verifyValidUsernameandPassword</a></td><td rowspan="1">1724725072867</td><td rowspan="1">567</td></tr><tr><th colspan="4">Chrome Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testscript.LoginPageTest</td><td><a href="#m1">verifyValidUsernameandPassword</a></td><td rowspan="1">1724725068593</td><td rowspan="1">1162</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Edge Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">testscript.LoginPageTest</td><td><a href="#m2">initializeMethod</a></td><td rowspan="1">1724725073850</td><td rowspan="1">4845</td></tr><tr><th colspan="4">Edge Test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="3">testscript.LoginPageTest</td><td><a href="#m3">afterMethod</a></td><td rowspan="2">1724725078715</td><td rowspan="2">-1724725078715</td></tr><tr class="skippedeven"><td><a href="#m4">afterMethod</a></td></tr><tr class="skippedeven"><td><a href="#m5">initializeMethod</a></td><td rowspan="1">1724725078707</td><td rowspan="1">-1724725078707</td></tr><tr><th colspan="4">Edge Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="2">testscript.LoginPageTest</td><td><a href="#m6">verifyValidUsernameandPassword</a></td><td rowspan="2">1724725078700</td><td rowspan="2">0</td></tr><tr class="skippedeven"><td><a href="#m7">verifyValidUsernameandPassword</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Grouping</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Grouping &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testscript.LoginPageTest</td><td><a href="#m0">verifyValidUsernameandPassword</a></td><td rowspan="1">1725331246864</td><td rowspan="1">504</td></tr><tr><th colspan="4">Grouping &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="2">testscript.LoginPageTest</td><td><a href="#m1">verifyValidUsernameandPassword</a></td><td rowspan="2">1725331244358</td><td rowspan="2">424</td></tr><tr class="retriedeven"><td><a href="#m2">verifyValidUsernameandPassword</a></td></tr><tr><th colspan="4">Grouping &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testscript.LoginPageTest</td><td><a href="#m3">verifyValidUsernameandPassword</a></td><td rowspan="1">1725331236674</td><td rowspan="1">659</td></tr></tbody>
 </table>
-<h2>Chrome Test</h2><h3 id="m0">testscript.LoginPageTest#verifyValidUsernameandPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin@123</td><td>admin123</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//p[text()=&apos;Dashboard&apos;]&quot;}
-  (Session info: chrome=127.0.6533.120)
+<h2>Grouping</h2><h3 id="m0">testscript.LoginPageTest#verifyValidUsernameandPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin@123</td><td>admin123</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//p[text()=&apos;Dashboard&apos;]&quot;}
+  (Session info: chrome=128.0.6613.86)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c6083dc8ce7852983ceec1ab256cfdd4, findElement {value=//p[text()=&apos;Dashboard&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61453}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61453/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c6083dc8ce7852983ceec1ab256cfdd4
+Command: [4f785a477e0fd9898944f79edc8799ce, findElement {using=xpath, value=//p[text()=&apos;Dashboard&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.86, chrome: {chromedriverVersion: 128.0.6613.119 (6e439cfca4d..., userDataDir: C:\windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65369}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65369/devtoo..., se:cdpVersion: 128.0.6613.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4f785a477e0fd9898944f79edc8799ce
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -43,17 +40,15 @@ Session ID: c6083dc8ce7852983ceec1ab256cfdd4
 	at testscript.LoginPageTest.verifyValidUsernameandPassword(LoginPageTest.java:36)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testscript.LoginPageTest#verifyValidUsernameandPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin</td><td>admin</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Edge Test</h2><h3 id="m2">testscript.LoginPageTest#initializeMethod</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Edge</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: unknown error: session deleted because of page crash
-from unknown error: cannot determine loading status
-from tab crashed
-  (Session info: MicrosoftEdge=128.0.2739.42)
+<h3 id="m1">testscript.LoginPageTest#verifyValidUsernameandPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin@123</td><td>admin123</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//p[text()=&apos;Dashboard&apos;]&quot;}
+  (Session info: chrome=128.0.6613.86)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [45f5d30e648cde17b56049615f942f4f, maximizeCurrentWindow {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 128.0.2739.42, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:61479}, msedge: {msedgedriverVersion: 128.0.2739.42 (e015505d79c9..., userDataDir: C:\windows\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61479/devtoo..., se:cdpVersion: 128.0.2739.42, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 45f5d30e648cde17b56049615f942f4f
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [42a42ab9ff955a6d34e6f94aa80db6ce, findElement {using=xpath, value=//p[text()=&apos;Dashboard&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.86, chrome: {chromedriverVersion: 128.0.6613.119 (6e439cfca4d..., userDataDir: C:\windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65348}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65348/devtoo..., se:cdpVersion: 128.0.6613.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 42a42ab9ff955a6d34e6f94aa80db6ce
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -61,25 +56,26 @@ Session ID: 45f5d30e648cde17b56049615f942f4f
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1034)
-	at testscript.BaseMart.initializeMethod(BaseMart.java:29)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+	at pages.LoginPage.isDashboardDisplayed(LoginPage.java:37)
+	at testscript.LoginPageTest.verifyValidUsernameandPassword(LoginPageTest.java:36)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">testscript.LoginPageTest#afterMethod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">testscript.LoginPageTest#afterMethod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">testscript.LoginPageTest#initializeMethod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">testscript.LoginPageTest#verifyValidUsernameandPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin</td><td>admin</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.WebDriverException: unknown error: session deleted because of page crash
-from unknown error: cannot determine loading status
-from tab crashed
-  (Session info: MicrosoftEdge=128.0.2739.42)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testscript.LoginPageTest#verifyValidUsernameandPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin@123</td><td>admin123</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//p[text()=&apos;Dashboard&apos;]&quot;}
+  (Session info: chrome=128.0.6613.86)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [45f5d30e648cde17b56049615f942f4f, maximizeCurrentWindow {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 128.0.2739.42, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:61479}, msedge: {msedgedriverVersion: 128.0.2739.42 (e015505d79c9..., userDataDir: C:\windows\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61479/devtoo..., se:cdpVersion: 128.0.2739.42, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 45f5d30e648cde17b56049615f942f4f
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a6acee743aa427d023bbddc45d0bae61, findElement {using=xpath, value=//p[text()=&apos;Dashboard&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.86, chrome: {chromedriverVersion: 128.0.6613.119 (6e439cfca4d..., userDataDir: C:\windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65327}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65327/devtoo..., se:cdpVersion: 128.0.6613.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a6acee743aa427d023bbddc45d0bae61
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -87,34 +83,17 @@ Session ID: 45f5d30e648cde17b56049615f942f4f
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1034)
-	at testscript.BaseMart.initializeMethod(BaseMart.java:29)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+	at pages.LoginPage.isDashboardDisplayed(LoginPage.java:37)
+	at testscript.LoginPageTest.verifyValidUsernameandPassword(LoginPageTest.java:36)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">testscript.LoginPageTest#verifyValidUsernameandPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin@123</td><td>admin123</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.WebDriverException: unknown error: session deleted because of page crash
-from unknown error: cannot determine loading status
-from tab crashed
-  (Session info: MicrosoftEdge=128.0.2739.42)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [45f5d30e648cde17b56049615f942f4f, maximizeCurrentWindow {}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 128.0.2739.42, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:61479}, msedge: {msedgedriverVersion: 128.0.2739.42 (e015505d79c9..., userDataDir: C:\windows\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61479/devtoo..., se:cdpVersion: 128.0.2739.42, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 45f5d30e648cde17b56049615f942f4f
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1034)
-	at testscript.BaseMart.initializeMethod(BaseMart.java:29)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testscript.LoginPageTest#verifyValidUsernameandPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin</td><td>admin</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -10,21 +10,29 @@ import org.testng.annotations.Test;
 
 import constants.Constants;
 import pages.AdminUsersNew;
+import pages.AdminUsersSearch;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class AdminUsersNewTest extends BaseMart {
+	public LoginPage login;
+	public AdminUsersNew adminUser;
+	public AdminUsersSearch adminUsersSearch;
 	@Test
 	public void adminUsersNew() throws IOException {
 
 		String userNameField = ExcelUtility.getStringData(1, 0, "Login_data");
 		String passWord = ExcelUtility.getStringData(1, 1, "Login_data");
-		LoginPage login = new LoginPage(driver);
+		String adminusername = ExcelUtility.getStringData(1, 0, "AdminUserDetails");
+		String adminpassword = ExcelUtility.getStringData(1, 1, "AdminUserDetails");
+	/*	LoginPage login = new LoginPage(driver);
 		login.entervalidUsername(userNameField);
 		login.entervalidPassword(passWord);
-		login.clickOnSigninbutton();
-
-		AdminUsersNew usernew = new AdminUsersNew(driver);
+		login.clickOnSigninbutton();*/
+		login=new LoginPage(driver);
+		adminUser=login.entervalidUsername(userNameField).entervalidPassword(passWord).clickOnSigninbutton();
+		adminUsersSearch=adminUser.clickAdminUsers().clickManageUsers().clickNewbutton().enterUsername(adminusername).enterPassword(adminpassword).selectUsertypefromDropdown().clickSave();
+	/*	AdminUsersNew usernew = new AdminUsersNew(driver);
 		String adminusername = ExcelUtility.getStringData(1, 0, "AdminUserDetails");
 		String adminpassword = ExcelUtility.getStringData(1, 1, "AdminUserDetails");
 		usernew.clickAdminUsers();
@@ -33,9 +41,9 @@ public class AdminUsersNewTest extends BaseMart {
 		usernew.enterUsername(adminusername);
 		usernew.enterPassword(adminpassword);
 		usernew.selectUsertypefromDropdown();
-		usernew.clickSave();
+		usernew.clickSave();*/
 
-		boolean isAlertdisplayed = usernew.isAlertDisplayed();
+		boolean isAlertdisplayed = adminUser.isAlertDisplayed();
 		assertTrue(isAlertdisplayed, Constants.ERRORFORADMINUSERNEWUSER);
 	}
 }

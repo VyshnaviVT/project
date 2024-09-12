@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import utilities.PageUtility;
+import utilities.waitUtility;
 
 public class AdminUsersSearch {
 	WebDriver driver;
@@ -17,6 +18,7 @@ public class AdminUsersSearch {
 	}
 	
 	PageUtility page=new PageUtility();
+	waitUtility Wait = new waitUtility();
 
 	@FindBy(xpath = "//i[@class='nav-icon fas fa-users']")
 	WebElement adminUsers;
@@ -56,6 +58,7 @@ public class AdminUsersSearch {
 	}
 	
 	public void clickSearchButton2() {
+		Wait.waitAdminSearch(searchButton2); 
 		searchButton2.click();
 	}
 	

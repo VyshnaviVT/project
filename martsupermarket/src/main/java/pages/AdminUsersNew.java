@@ -38,39 +38,46 @@ public class AdminUsersNew {
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	WebElement alert;
 
-	public void clickAdminUsers() {
+	public AdminUsersNew clickAdminUsers() {
 		adminUsers.click();
+		return this;
 	}
 
-	public void clickManageUsers() {
+	public AdminUsersNew clickManageUsers() {
 		manageUsers.click();
+		return this;
 	}
 
-	public void clickNewbutton() {
+	public AdminUsersNew clickNewbutton() {
 		newButton.click();
+		return this;
 	}
 
-	public void enterUsername(String username) {
+	public AdminUsersNew enterUsername(String username) {
 		usernameField.sendKeys(username);
+		return this;
 	}
 
-	public void enterPassword(String password) {
+	public AdminUsersNew enterPassword(String password) {
 		passwordField.sendKeys(password);
+		return this;
 	}
 
-	public void selectUsertypefromDropdown() {
+	public AdminUsersNew selectUsertypefromDropdown() {
 
 		page.selectUserType(usertypeDropdown);
 		// Select dropdown1 = new Select(usertypeDropdown);
 		// dropdown1.selectByIndex(2);
+		return this;
 	}
 
-	public void clickSave() {
+	public AdminUsersSearch clickSave() {
+		Wait.waitAdmin(saveButton);
 		saveButton.click();
+		return new AdminUsersSearch(driver);
 	}
-	
-	public boolean isAlertDisplayed()
-	{
+
+	public boolean isAlertDisplayed() {
 		return alert.isDisplayed();
 	}
 }

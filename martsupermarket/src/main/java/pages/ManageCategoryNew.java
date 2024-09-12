@@ -5,6 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import constants.Constants;
+import utilities.FileUploadUtility;
+import utilities.waitUtility;
+
 public class ManageCategoryNew {
 	WebDriver driver;
 
@@ -12,7 +16,10 @@ public class ManageCategoryNew {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-
+	
+	FileUploadUtility file=new FileUploadUtility();
+	waitUtility Wait = new waitUtility();
+	
 	//@FindBy(xpath = "//i[@class='nav-icon fas fa-list-alt']") WebElement manageCategory; //site has removed manage category
 	
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category'][1]")
@@ -53,12 +60,14 @@ public class ManageCategoryNew {
 	}
 
 	public void imageUpload() {
-
-		imageUpload.sendKeys("C:\\Users\\vyshnavi\\Downloads\\chips.jpeg");
+		file.imageUploadForManageCategory(imageUpload,Constants.IMAGEUPLOAD);
+		
 	}
 
 	public void clickSaveButton() {
+		Wait.categoryWait(saveButton);
 		saveButton.click();
+		
 	}
 	
 	public boolean isAlertdisplayed()

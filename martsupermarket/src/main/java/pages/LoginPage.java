@@ -1,7 +1,5 @@
 package pages;
 
-import javax.xml.xpath.XPath;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,16 +19,19 @@ public class LoginPage {
 	@FindBy(xpath = "//p[text()='Dashboard']") WebElement dashBoard;
 	@FindBy(xpath="//i[@class='icon fas fa-ban']") WebElement alertSymbol;
 
-	public void entervalidUsername(String username) {
+	public LoginPage entervalidUsername(String username) {
 		userName.sendKeys(username);
+		return this;
 	}
 
-	public void entervalidPassword(String passWord) {
+	public LoginPage  entervalidPassword(String passWord) {
 		password.sendKeys(passWord);
+		return this;
 	}
 
-	public void clickOnSigninbutton() {
+	public AdminUsersNew clickOnSigninbutton() {
 		signInButton.click();
+		return new AdminUsersNew(driver);
 	}
 
 	public boolean isDashboardDisplayed() {

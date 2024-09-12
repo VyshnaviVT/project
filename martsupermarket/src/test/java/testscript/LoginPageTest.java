@@ -13,8 +13,8 @@ import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class LoginPageTest extends BaseMart {
-	@DataProvider(name="credentials")
 	
+	@DataProvider(name="credentials")
 	public Object[][] testData() {        // data provider
 		Object[][] input = new Object[2][2];
 		input[0][0] = "admin";
@@ -23,7 +23,7 @@ public class LoginPageTest extends BaseMart {
 		input[1][1] = "admin123";
 		return input;
 		}
-	@Test(priority = 1,dataProvider = "credentials")
+	@Test(priority = 1,retryAnalyzer = retry.Retry.class, dataProvider = "credentials",groups={"Smoke"})
 	public void verifyValidUsernameandPassword(String userNameField,String passWord) throws IOException {
 	//	String userNameField = ExcelUtility.getStringData(1, 0, "Login_data");// row,column
 	//	String passWord = ExcelUtility.getStringData(1, 1, "Login_data");
